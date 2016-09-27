@@ -36,3 +36,18 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
+import string
+from string import ascii_lowercase
+from string import ascii_letters
+import collections
+start=input("Please enter a string of text (the bigger the better): ")
+print("The distribution of characters in " '"' +start+ '"' " is:")
+
+letters=collections.Counter(start)
+
+
+d = collections.defaultdict(int)
+for c in start:
+    d[c] +=1
+for c in sorted(d, key=d.get, reverse=True):
+    print(int(d*c))
