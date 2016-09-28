@@ -1,7 +1,7 @@
 """
 distribution.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Robbie
+Credit: Matt
 
 Assignment:
 
@@ -40,14 +40,15 @@ import string
 from string import ascii_lowercase
 from string import ascii_letters
 import collections
+
 start=input("Please enter a string of text (the bigger the better): ")
 print("The distribution of characters in " '"' +start+ '"' " is:")
 
 letters=collections.Counter(start)
 
-
 d = collections.defaultdict(int)
-for c in start:
+p = start.lower()
+for c in p:
     d[c] +=1
-for c in sorted(d, key=d.get, reverse=True):
-    print(int(d*c))
+for c in sorted(ascii_lowercase, key=d.get, reverse=True):
+    print(c*d[c])
