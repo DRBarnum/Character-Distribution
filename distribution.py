@@ -1,7 +1,7 @@
 """
 distribution.py
 Author: Robbie
-Credit: Matt
+Credit: Matt, http://stackoverflow.com/questions/14032521/python-data-structure-sort-list-alphabetically
 
 Assignment:
 
@@ -40,6 +40,7 @@ import string
 from string import ascii_lowercase
 from string import ascii_letters
 import collections
+import math
 
 start=input("Please enter a string of text (the bigger the better): ")
 print("The distribution of characters in " '"' +start+ '"' " is:")
@@ -50,5 +51,10 @@ d = collections.defaultdict(int)
 p = start.lower()
 for c in p:
     d[c] +=1
-for c in sorted(ascii_lowercase, key=d.get, reverse=True):
-    print(c*d[c])
+for c in sorted(start):
+   for m in c:
+       :
+           print(c*d[c])
+
+
+
