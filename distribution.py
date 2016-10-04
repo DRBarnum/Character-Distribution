@@ -49,17 +49,19 @@ letters=collections.Counter(start)
 
 d = collections.defaultdict(int)
 p = start.lower()
-for c in p:
-    d[c] +=1
 lol=[]
-for c in sorted(ascii_lowercase, key=d.get, reverse=True):
-    lol.append((c, d[c]))
-
-print(lol)
-
-for lol in sorted(p):
-    for c in sorted(ascii_lowercase, key=d.get, reverse=True):
+m= p.replace(" ","")
+for c in m:
+    d[c] +=1
+lol = sorted(d.items())
+for x in range(1):
+    for x in lol:
         print(c*d[c])
+
+
+
+
+
 
 
 
