@@ -51,12 +51,15 @@ d = collections.defaultdict(int)
 p = start.lower()
 lol=[]
 m= p.replace(" ","")
+
 for c in m:
     d[c] +=1
 lol = sorted(d.items())
-for x in range(1):
-    for x in lol:
-        print(c*d[c])
+for x in range(100, 0, -1):
+    for h in lol:
+        if h[1] == x:
+            print(h[0]*h[1])
+    
 
 
 
