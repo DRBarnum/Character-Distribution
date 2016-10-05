@@ -50,8 +50,8 @@ letters=collections.Counter(start)
 d = collections.defaultdict(int)
 p = start.lower()
 lol=[]
-m= p.replace(" ","")
-
+g = p.replace(" ","")
+m =filter(str.isalpha,g)
 for c in m:
     d[c] +=1
 lol = sorted(d.items())
